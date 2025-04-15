@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate") %>.
+
+<div class="row mt-3">
+    <h1 class="col-6 offset-3" >Sign Up For WanderLust</h1>
+    <div class="col-6 offset-3">
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">UserName</label>
+                <input name="username" id="username" type="text" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="valid-feedback">Looks Good</div>
+              </div>
+
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input name="email" id="email" type="email" class="form-control" required />
+               
+              </div>
+
+
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" id="password" type="password" class="form-control" required />
+               
+              </div>
+              <button class="btn- btn-success">Sign UP</button>
+        </form>
+    </div>
+
+</div>
+
+
+<script>
+    // Bootstrap 5 custom validation activation
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+  
